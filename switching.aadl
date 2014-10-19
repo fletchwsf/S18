@@ -21,14 +21,20 @@
 package switching
 public
 
+with dataDictionary;
 with ARP4761, EMV2;
 
 system switching
 	features
-		In1 : in data port;
-		In2 : in data port;
-		StatusLoss : out data port;
-		StatusMisleading : out data port;
+		In1 : in data port dataDictionary::FMS_StatusData;
+		In2 : in data port dataDictionary::FMS_StatusData;
+		StatusLoss : out data port dataDictionary::FMS_StatusData;
+		StatusMisleading : out data port dataDictionary::FMS_StatusData;
+	flows
+		fl1 : flow sink In1;
+		fl2 : flow sink In2;
+		fl3 : flow source StatusLoss;
+		fl4 : flow source StatusMisleading;
 	annex EMV2 {**
 		use types S18_ErrorLibrary;
 		use behavior S18_ErrorLibrary::threeState;

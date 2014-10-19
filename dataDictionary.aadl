@@ -7,5 +7,7 @@ data DC28VoltRaw
 data DC28Volt
 	end DC28Volt;	
 	
+data FMS_StatusData
+	end FMS_StatusData;
 
 end dataDictionary;

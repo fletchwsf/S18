@@ -20,16 +20,20 @@
 package voter
 public
 
+with dataDictionary;
 with ARP4761, EMV2;
 
 system voter
 	features
-		In1 : in data port;
-		In2 : in data port;
-		In3 : in data port;
-		
-		StatusOut : out data port;
-		
+		In1 : in data port dataDictionary::FMS_StatusData;
+		In2 : in data port dataDictionary::FMS_StatusData;
+		In3 : in data port dataDictionary::FMS_StatusData;
+		StatusOut : out data port dataDictionary::FMS_StatusData;
+	flows
+		f1 : flow sink In1;
+		f2 : flow sink In2;
+		f3 : flow sink In3;
+		f4 : flow source StatusOut;
 	annex EMV2 {**
 		use types S18_ErrorLibrary;
 		use behavior S18_ErrorLibrary::threeState;
@@ -39,9 +43,9 @@ system voter
 				In3 :  in propagation {err_data, no_data};
 				statusOut : out propagation {err_data, no_data};
 			flows
-				--es1: error sink In1{err_data, no_data};
-				--es2: error sink In2{err_data, no_data};
-				--es3: error sink In3{err_data, no_data};
+				es1: error sink In1{err_data, no_data};
+				es2: error sink In2{err_data, no_data};
+				es3: error sink In3{err_data, no_data};
 				es4: error source statusOut{err_data} when erroneous;
 				es5: error source statusOut{no_data} when failed;
 		end propagations;

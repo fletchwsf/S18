@@ -35,9 +35,10 @@ with ARP4761, EMV2;
 system computer
 	features
 		powerIn : in data port dataDictionary::DC28Volt;
-		statusOut : out data port;
+		statusOut : out data port dataDictionary::FMS_StatusData;
 	flows
 		fl1 : flow sink powerIn;
+		fl2 : flow source statusOut;
 	annex EMV2 {**
 		use types S18_ErrorLibrary;
 		use behavior S18_ErrorLibrary::threeState;
@@ -46,7 +47,7 @@ system computer
 				statusOut : out propagation {err_data, no_data};
 			flows
 				-- error sinks
-				--es1: error sink powerIn{noPower};
+				es1: error sink powerIn{noPower};
 				-- error sources
 				es2: error source statusOut{err_data} when erroneous;
 				es3: error source statusOut{no_data} when failed;

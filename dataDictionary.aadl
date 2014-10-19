@@ -1,0 +1,11 @@
+package dataDictionary
+public
+	
+data DC28VoltRaw
+	end DC28VoltRaw;
+	
+data DC28Volt
+	end DC28Volt;	
+	
+
+end dataDictionary;

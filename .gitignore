@@ -1,3 +1,11 @@
+# AADL OSATE ignore files
+.aadlsettings
+.project
+.csv
+.fta
+.ped
+.xml
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -26,8 +34,7 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must end with two \r
-Icon
-
+Icon
 # Thumbnails
 ._*
 

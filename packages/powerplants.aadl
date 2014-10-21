@@ -20,11 +20,9 @@ system implementation powerplants.impl
 		engine3 : system engine::engine.item;
 	connections
 		new_connection: port engine1.generatorDC -> engine1_generatorDC;
-new_connection2: port engine2.generatorDC ->
-						engine2_generatorDC_1;
-new_connection3: port engine2.generatorDC -> engine2_generatorDC_2;
-new_connection4: port engine3.generatorDC ->
-						engine3_generatorDC;
+		new_connection2: port engine2.generatorDC -> engine2_generatorDC_1;
+		new_connection3: port engine2.generatorDC -> engine2_generatorDC_2;
+		new_connection4: port engine3.generatorDC -> engine3_generatorDC;
 		
 	annex EMV2 {**
 		use types S18_ErrorLibrary;
@@ -32,9 +30,16 @@ new_connection4: port engine3.generatorDC ->
 		composite error behavior
 			states
 				[ engine1.failed and engine2.failed and engine3.failed]->failed;	
+				
+				-- How do we account for this state in the FHA?
+				--[(engine1.failed and engine2.failed) or
+				-- (engine1.failed and engine3.failed) or 
+				-- (engine2.failed and engine3.failed)] -> hazardous failure
+			
 		end composite;
 		
 		properties
+			-- The all engine out condition is picked up in the Fault Tree, but not the FHA?
 			EMV2::severity => ARP4761::Catastrophic applies to failed;
 			ARP4761::hazards => 
 			([
@@ -47,7 +52,18 @@ new_connection4: port engine3.generatorDC ->
 			])
 			applies to failed;
 		
-		
+		-- The all engine out condition is picked up in the Fault Tree, but not the FHA?
+--			EMV2::severity => ARP4761::Hazardous applies to hazardous failure
+--			ARP4761::hazards => 
+--			([
+--				description => "Two enigne out condition";
+--				environment => "All";
+--				failure => "Two engines out only partial services available";
+--				failureEffect => "Loss thrust";
+--				phases => ("Takeoff, In-flight, Landing");
+--				comment => "Two engine inoperative with failure to maintain altitude";
+--			])
+--			applies to failed;
 	**};
 end powerplants.impl;
 

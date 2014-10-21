@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" xmi:id="_RWizMFiyEeSKJaywiSRplg" name="model_V2_complete_Instance" category="system">
+  <featureInstance xmi:id="_RYU74ViyEeSKJaywiSRplg" name="StatusLoss" dstConnectionInstance="_RY7Y1FiyEeSKJaywiSRplg" dstFlowSpec="_RYU741iyEeSKJaywiSRplg" direction="out">
+    <feature xsi:type="aadl2:DataPort" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+  </featureInstance>
+  <featureInstance xmi:id="_RYU74liyEeSKJaywiSRplg" name="StatusMisleading" dstConnectionInstance="_RY7Y1liyEeSKJaywiSRplg" dstFlowSpec="_RYU75FiyEeSKJaywiSRplg" direction="out">
+    <feature xsi:type="aadl2:DataPort" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
+  </featureInstance>
+  <componentInstance xmi:id="_RW1uIFiyEeSKJaywiSRplg" name="RT1_1GHz" category="processor">
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.0"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RW1uIViyEeSKJaywiSRplg" name="RT2_1GHz" category="processor">
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.1"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RW_fIFiyEeSKJaywiSRplg" name="RT3_1GHz" category="processor">
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.2"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RW_fIViyEeSKJaywiSRplg" name="engineSubsystem" category="system">
+    <featureInstance xmi:id="_RXlVAFiyEeSKJaywiSRplg" name="engine1_generatorDC" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RXlVAViyEeSKJaywiSRplg" name="engine2_generatorDC_1" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RXlVAliyEeSKJaywiSRplg" name="engine2_generatorDC_2" dstConnectionInstance="_RYod6ViyEeSKJaywiSRplg" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RXlVA1iyEeSKJaywiSRplg" name="engine3_generatorDC" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
+    </featureInstance>
+    <componentInstance xmi:id="_RXSaEFiyEeSKJaywiSRplg" name="engine1" category="system">
+      <featureInstance xmi:id="_RXSaEViyEeSKJaywiSRplg" name="generatorDC" srcConnectionInstance="_RYod4FiyEeSKJaywiSRplg" dstFlowSpec="_RXcLEFiyEeSKJaywiSRplg" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../packages/engine.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+      </featureInstance>
+      <flowSpecification xmi:id="_RXcLEFiyEeSKJaywiSRplg" name="fl1" destination="_RXSaEViyEeSKJaywiSRplg">
+        <flowSpecification href="../packages/engine.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+      </flowSpecification>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0"/>
+      <index>0</index>
+    </componentInstance>
+    <componentInstance xmi:id="_RXcLEViyEeSKJaywiSRplg" name="engine2" category="system">
+      <featureInstance xmi:id="_RXcLEliyEeSKJaywiSRplg" name="generatorDC" srcConnectionInstance="_RYod41iyEeSKJaywiSRplg _RYod5liyEeSKJaywiSRplg _RYod6ViyEeSKJaywiSRplg" dstFlowSpec="_RXcLE1iyEeSKJaywiSRplg" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../packages/engine.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+      </featureInstance>
+      <flowSpecification xmi:id="_RXcLE1iyEeSKJaywiSRplg" name="fl1" destination="_RXcLEliyEeSKJaywiSRplg">
+        <flowSpecification href="../packages/engine.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+      </flowSpecification>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.1"/>
+      <index>0</index>
+    </componentInstance>
+    <componentInstance xmi:id="_RXcLFFiyEeSKJaywiSRplg" name="engine3" category="system">
+      <featureInstance xmi:id="_RXcLFViyEeSKJaywiSRplg" name="generatorDC" srcConnectionInstance="_RYod61iyEeSKJaywiSRplg" dstFlowSpec="_RXcLFliyEeSKJaywiSRplg" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../packages/engine.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+      </featureInstance>
+      <flowSpecification xmi:id="_RXcLFliyEeSKJaywiSRplg" name="fl1" destination="_RXcLFViyEeSKJaywiSRplg">
+        <flowSpecification href="../packages/engine.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+      </flowSpecification>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.2"/>
+      <index>0</index>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.0"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RXlVBFiyEeSKJaywiSRplg" name="powerSupply1" category="system">
+    <featureInstance xmi:id="_RXlVBViyEeSKJaywiSRplg" name="DC28VoltRawIn" dstConnectionInstance="_RYod4FiyEeSKJaywiSRplg" srcFlowSpec="_RXlVB1iyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RXlVBliyEeSKJaywiSRplg" name="DC28VoltOut" srcConnectionInstance="_RYod7liyEeSKJaywiSRplg" dstFlowSpec="_RXlVCFiyEeSKJaywiSRplg" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <flowSpecification xmi:id="_RXlVB1iyEeSKJaywiSRplg" name="fl1" source="_RXlVBViyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RXlVCFiyEeSKJaywiSRplg" name="fl2" destination="_RXlVBliyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.1"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RXlVCViyEeSKJaywiSRplg" name="powerSupply2" category="system">
+    <featureInstance xmi:id="_RXlVCliyEeSKJaywiSRplg" name="DC28VoltRawIn" dstConnectionInstance="_RYod41iyEeSKJaywiSRplg" srcFlowSpec="_RXlVDFiyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RXlVC1iyEeSKJaywiSRplg" name="DC28VoltOut" srcConnectionInstance="_RYxn0FiyEeSKJaywiSRplg" dstFlowSpec="_RXvGAFiyEeSKJaywiSRplg" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <flowSpecification xmi:id="_RXlVDFiyEeSKJaywiSRplg" name="fl1" source="_RXlVCliyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RXvGAFiyEeSKJaywiSRplg" name="fl2" destination="_RXlVC1iyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.2"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RXvGAViyEeSKJaywiSRplg" name="powerSupply3" category="system">
+    <featureInstance xmi:id="_RXvGAliyEeSKJaywiSRplg" name="DC28VoltRawIn" dstConnectionInstance="_RYod5liyEeSKJaywiSRplg" srcFlowSpec="_RXvGBFiyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RXvGA1iyEeSKJaywiSRplg" name="DC28VoltOut" srcConnectionInstance="_RYxn0liyEeSKJaywiSRplg" dstFlowSpec="_RXvGBViyEeSKJaywiSRplg" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <flowSpecification xmi:id="_RXvGBFiyEeSKJaywiSRplg" name="fl1" source="_RXvGAliyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RXvGBViyEeSKJaywiSRplg" name="fl2" destination="_RXvGA1iyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.3"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RXvGBliyEeSKJaywiSRplg" name="powerSupply4" category="system">
+    <featureInstance xmi:id="_RXvGB1iyEeSKJaywiSRplg" name="DC28VoltRawIn" dstConnectionInstance="_RYod61iyEeSKJaywiSRplg" srcFlowSpec="_RXvGCViyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RXvGCFiyEeSKJaywiSRplg" name="DC28VoltOut" srcConnectionInstance="_RYxn1FiyEeSKJaywiSRplg" dstFlowSpec="_RXvGCliyEeSKJaywiSRplg" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <flowSpecification xmi:id="_RXvGCViyEeSKJaywiSRplg" name="fl1" source="_RXvGB1iyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RXvGCliyEeSKJaywiSRplg" name="fl2" destination="_RXvGCFiyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.4"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RXvGC1iyEeSKJaywiSRplg" name="mainComputer1" category="system">
+    <ownedPropertyAssociation xmi:id="_RZtb8FiyEeSKJaywiSRplg">
+      <property href="../../Plugin_Resources/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
+      <ownedValue xmi:id="_RZtb8ViyEeSKJaywiSRplg">
+        <ownedValue xsi:type="aadl2:ListValue" xmi:id="_RZtb8liyEeSKJaywiSRplg">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" xmi:id="_RZtb81iyEeSKJaywiSRplg" referencedInstanceObject="_RW1uIViyEeSKJaywiSRplg"/>
+        </ownedValue>
+      </ownedValue>
+    </ownedPropertyAssociation>
+    <featureInstance xmi:id="_RX43AFiyEeSKJaywiSRplg" name="powerIn" dstConnectionInstance="_RYod7liyEeSKJaywiSRplg" srcFlowSpec="_RX43AliyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RX43AViyEeSKJaywiSRplg" name="statusOut" srcConnectionInstance="_RYxn1liyEeSKJaywiSRplg" dstFlowSpec="_RX43A1iyEeSKJaywiSRplg" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <flowSpecification xmi:id="_RX43AliyEeSKJaywiSRplg" name="fl1" source="_RX43AFiyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RX43A1iyEeSKJaywiSRplg" name="fl2" destination="_RX43AViyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.5"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RX43BFiyEeSKJaywiSRplg" name="mainComputer2" category="system">
+    <ownedPropertyAssociation xmi:id="_RZ2l4FiyEeSKJaywiSRplg">
+      <property href="../../Plugin_Resources/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
+      <ownedValue xmi:id="_RZ2l4ViyEeSKJaywiSRplg">
+        <ownedValue xsi:type="aadl2:ListValue" xmi:id="_RZ2l4liyEeSKJaywiSRplg">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" xmi:id="_RZ2l41iyEeSKJaywiSRplg" referencedInstanceObject="_RW1uIViyEeSKJaywiSRplg"/>
+        </ownedValue>
+      </ownedValue>
+    </ownedPropertyAssociation>
+    <featureInstance xmi:id="_RX43BViyEeSKJaywiSRplg" name="powerIn" dstConnectionInstance="_RYxn0FiyEeSKJaywiSRplg" srcFlowSpec="_RX43B1iyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RX43BliyEeSKJaywiSRplg" name="statusOut" srcConnectionInstance="_RYxn2FiyEeSKJaywiSRplg" dstFlowSpec="_RX43CFiyEeSKJaywiSRplg" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <flowSpecification xmi:id="_RX43B1iyEeSKJaywiSRplg" name="fl1" source="_RX43BViyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RX43CFiyEeSKJaywiSRplg" name="fl2" destination="_RX43BliyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.6"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RX43CViyEeSKJaywiSRplg" name="mainComputer3" category="system">
+    <ownedPropertyAssociation xmi:id="_RZ2l5FiyEeSKJaywiSRplg">
+      <property href="../../Plugin_Resources/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
+      <ownedValue xmi:id="_RZ2l5ViyEeSKJaywiSRplg">
+        <ownedValue xsi:type="aadl2:ListValue" xmi:id="_RZ2l5liyEeSKJaywiSRplg">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" xmi:id="_RZ2l51iyEeSKJaywiSRplg" referencedInstanceObject="_RW1uIViyEeSKJaywiSRplg"/>
+        </ownedValue>
+      </ownedValue>
+    </ownedPropertyAssociation>
+    <featureInstance xmi:id="_RX43CliyEeSKJaywiSRplg" name="powerIn" dstConnectionInstance="_RYxn0liyEeSKJaywiSRplg" srcFlowSpec="_RX43DFiyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RX43C1iyEeSKJaywiSRplg" name="statusOut" srcConnectionInstance="_RYxn2liyEeSKJaywiSRplg" dstFlowSpec="_RX43DViyEeSKJaywiSRplg" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <flowSpecification xmi:id="_RX43DFiyEeSKJaywiSRplg" name="fl1" source="_RX43CliyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RX43DViyEeSKJaywiSRplg" name="fl2" destination="_RX43C1iyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.7"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RX43DliyEeSKJaywiSRplg" name="mainComputer4" category="system">
+    <ownedPropertyAssociation xmi:id="_RZ2l6FiyEeSKJaywiSRplg">
+      <property href="../../Plugin_Resources/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
+      <ownedValue xmi:id="_RZ2l6ViyEeSKJaywiSRplg">
+        <ownedValue xsi:type="aadl2:ListValue" xmi:id="_RZ2l6liyEeSKJaywiSRplg">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" xmi:id="_RZ2l61iyEeSKJaywiSRplg" referencedInstanceObject="_RW_fIFiyEeSKJaywiSRplg"/>
+        </ownedValue>
+      </ownedValue>
+    </ownedPropertyAssociation>
+    <featureInstance xmi:id="_RX43D1iyEeSKJaywiSRplg" name="powerIn" dstConnectionInstance="_RYxn1FiyEeSKJaywiSRplg" srcFlowSpec="_RX43EViyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RX43EFiyEeSKJaywiSRplg" name="statusOut" srcConnectionInstance="_RY7Y0FiyEeSKJaywiSRplg" dstFlowSpec="_RX43EliyEeSKJaywiSRplg" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <flowSpecification xmi:id="_RX43EViyEeSKJaywiSRplg" name="fl1" source="_RX43D1iyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RX43EliyEeSKJaywiSRplg" name="fl2" destination="_RX43EFiyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.8"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RX43E1iyEeSKJaywiSRplg" name="voterMain" category="system">
+    <ownedPropertyAssociation xmi:id="_RZ2l7FiyEeSKJaywiSRplg">
+      <property href="../../Plugin_Resources/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
+      <ownedValue xmi:id="_RZ2l7ViyEeSKJaywiSRplg">
+        <ownedValue xsi:type="aadl2:ListValue" xmi:id="_RZ2l7liyEeSKJaywiSRplg">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" xmi:id="_RZ2l71iyEeSKJaywiSRplg" referencedInstanceObject="_RW1uIFiyEeSKJaywiSRplg"/>
+        </ownedValue>
+      </ownedValue>
+    </ownedPropertyAssociation>
+    <featureInstance xmi:id="_RYCA8FiyEeSKJaywiSRplg" name="In1" dstConnectionInstance="_RYxn1liyEeSKJaywiSRplg" srcFlowSpec="_RYCA9FiyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RYCA8ViyEeSKJaywiSRplg" name="In2" dstConnectionInstance="_RYxn2FiyEeSKJaywiSRplg" srcFlowSpec="_RYCA9ViyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RYCA8liyEeSKJaywiSRplg" name="In3" dstConnectionInstance="_RYxn2liyEeSKJaywiSRplg" srcFlowSpec="_RYCA9liyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RYCA81iyEeSKJaywiSRplg" name="StatusOut" srcConnectionInstance="_RY7Y0liyEeSKJaywiSRplg" dstFlowSpec="_RYCA91iyEeSKJaywiSRplg" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
+    </featureInstance>
+    <flowSpecification xmi:id="_RYCA9FiyEeSKJaywiSRplg" name="f1" source="_RYCA8FiyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RYCA9ViyEeSKJaywiSRplg" name="f2" source="_RYCA8ViyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RYCA9liyEeSKJaywiSRplg" name="f3" source="_RYCA8liyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.2"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RYCA91iyEeSKJaywiSRplg" name="f4" destination="_RYCA81iyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.3"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.9"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_RYCA-FiyEeSKJaywiSRplg" name="norm_bckp_selection" category="system">
+    <featureInstance xmi:id="_RYLx8FiyEeSKJaywiSRplg" name="In1" dstConnectionInstance="_RY7Y0liyEeSKJaywiSRplg" srcFlowSpec="_RYLx9FiyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RYLx8ViyEeSKJaywiSRplg" name="In2" dstConnectionInstance="_RY7Y0FiyEeSKJaywiSRplg" srcFlowSpec="_RYLx9ViyEeSKJaywiSRplg">
+      <feature xsi:type="aadl2:DataPort" href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RYLx8liyEeSKJaywiSRplg" name="StatusLoss" srcConnectionInstance="_RY7Y1FiyEeSKJaywiSRplg" dstFlowSpec="_RYLx9liyEeSKJaywiSRplg" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance xmi:id="_RYLx81iyEeSKJaywiSRplg" name="StatusMisleading" srcConnectionInstance="_RY7Y1liyEeSKJaywiSRplg" dstFlowSpec="_RYU74FiyEeSKJaywiSRplg" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
+    </featureInstance>
+    <flowSpecification xmi:id="_RYLx9FiyEeSKJaywiSRplg" name="fl1" source="_RYLx8FiyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RYLx9ViyEeSKJaywiSRplg" name="fl2" source="_RYLx8ViyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RYLx9liyEeSKJaywiSRplg" name="fl3" destination="_RYLx8liyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.2"/>
+    </flowSpecification>
+    <flowSpecification xmi:id="_RYU74FiyEeSKJaywiSRplg" name="fl4" destination="_RYLx81iyEeSKJaywiSRplg">
+      <flowSpecification href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.3"/>
+    </flowSpecification>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.10"/>
+    <index>0</index>
+  </componentInstance>
+  <flowSpecification xmi:id="_RYU741iyEeSKJaywiSRplg" name="fls1" destination="_RYU74ViyEeSKJaywiSRplg">
+    <flowSpecification href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.0"/>
+  </flowSpecification>
+  <flowSpecification xmi:id="_RYU75FiyEeSKJaywiSRplg" name="fls2" destination="_RYU74liyEeSKJaywiSRplg">
+    <flowSpecification href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.1"/>
+  </flowSpecification>
+  <connectionInstance xmi:id="_RYod4FiyEeSKJaywiSRplg" name="engineSubsystem.engine1.generatorDC -> powerSupply1.DC28VoltRawIn" complete="true" kind="portConnection" destination="_RXlVBViyEeSKJaywiSRplg" source="_RXSaEViyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RYod4ViyEeSKJaywiSRplg" context="_RW_fIViyEeSKJaywiSRplg" source="_RXSaEViyEeSKJaywiSRplg" destination="_RXlVAFiyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference xmi:id="_RYod4liyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RXlVAFiyEeSKJaywiSRplg" destination="_RXlVBViyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.12"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RYod41iyEeSKJaywiSRplg" name="engineSubsystem.engine2.generatorDC -> powerSupply2.DC28VoltRawIn" complete="true" kind="portConnection" destination="_RXlVCliyEeSKJaywiSRplg" source="_RXcLEliyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RYod5FiyEeSKJaywiSRplg" context="_RW_fIViyEeSKJaywiSRplg" source="_RXcLEliyEeSKJaywiSRplg" destination="_RXlVAViyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
+    </connectionReference>
+    <connectionReference xmi:id="_RYod5ViyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RXlVAViyEeSKJaywiSRplg" destination="_RXlVCliyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.13"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RYod5liyEeSKJaywiSRplg" name="engineSubsystem.engine2.generatorDC -> powerSupply3.DC28VoltRawIn" complete="true" kind="portConnection" destination="_RXvGAliyEeSKJaywiSRplg" source="_RXcLEliyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RYod51iyEeSKJaywiSRplg" context="_RW_fIViyEeSKJaywiSRplg" source="_RXcLEliyEeSKJaywiSRplg" destination="_RXlVAViyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
+    </connectionReference>
+    <connectionReference xmi:id="_RYod6FiyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RXlVAViyEeSKJaywiSRplg" destination="_RXvGAliyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.14"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RYod6ViyEeSKJaywiSRplg" name="engineSubsystem.engine2.generatorDC -> engineSubsystem.engine2_generatorDC_2" kind="portConnection" destination="_RXlVAliyEeSKJaywiSRplg" source="_RXcLEliyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RYod6liyEeSKJaywiSRplg" context="_RW_fIViyEeSKJaywiSRplg" source="_RXcLEliyEeSKJaywiSRplg" destination="_RXlVAliyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RYod61iyEeSKJaywiSRplg" name="engineSubsystem.engine3.generatorDC -> powerSupply4.DC28VoltRawIn" complete="true" kind="portConnection" destination="_RXvGB1iyEeSKJaywiSRplg" source="_RXcLFViyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RYod7FiyEeSKJaywiSRplg" context="_RW_fIViyEeSKJaywiSRplg" source="_RXcLFViyEeSKJaywiSRplg" destination="_RXlVA1iyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+    </connectionReference>
+    <connectionReference xmi:id="_RYod7ViyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RXlVA1iyEeSKJaywiSRplg" destination="_RXvGB1iyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.11"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RYod7liyEeSKJaywiSRplg" name="powerSupply1.DC28VoltOut -> mainComputer1.powerIn" complete="true" kind="portConnection" destination="_RX43AFiyEeSKJaywiSRplg" source="_RXlVBliyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RYod71iyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RXlVBliyEeSKJaywiSRplg" destination="_RX43AFiyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RYxn0FiyEeSKJaywiSRplg" name="powerSupply2.DC28VoltOut -> mainComputer2.powerIn" complete="true" kind="portConnection" destination="_RX43BViyEeSKJaywiSRplg" source="_RXlVC1iyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RYxn0ViyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RXlVC1iyEeSKJaywiSRplg" destination="_RX43BViyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RYxn0liyEeSKJaywiSRplg" name="powerSupply3.DC28VoltOut -> mainComputer3.powerIn" complete="true" kind="portConnection" destination="_RX43CliyEeSKJaywiSRplg" source="_RXvGA1iyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RYxn01iyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RXvGA1iyEeSKJaywiSRplg" destination="_RX43CliyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RYxn1FiyEeSKJaywiSRplg" name="powerSupply4.DC28VoltOut -> mainComputer4.powerIn" complete="true" kind="portConnection" destination="_RX43D1iyEeSKJaywiSRplg" source="_RXvGCFiyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RYxn1ViyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RXvGCFiyEeSKJaywiSRplg" destination="_RX43D1iyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RYxn1liyEeSKJaywiSRplg" name="mainComputer1.statusOut -> voterMain.In1" complete="true" kind="portConnection" destination="_RYCA8FiyEeSKJaywiSRplg" source="_RX43AViyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RYxn11iyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RX43AViyEeSKJaywiSRplg" destination="_RYCA8FiyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RYxn2FiyEeSKJaywiSRplg" name="mainComputer2.statusOut -> voterMain.In2" complete="true" kind="portConnection" destination="_RYCA8ViyEeSKJaywiSRplg" source="_RX43BliyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RYxn2ViyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RX43BliyEeSKJaywiSRplg" destination="_RYCA8ViyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RYxn2liyEeSKJaywiSRplg" name="mainComputer3.statusOut -> voterMain.In3" complete="true" kind="portConnection" destination="_RYCA8liyEeSKJaywiSRplg" source="_RX43C1iyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RYxn21iyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RX43C1iyEeSKJaywiSRplg" destination="_RYCA8liyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RY7Y0FiyEeSKJaywiSRplg" name="mainComputer4.statusOut -> norm_bckp_selection.In2" complete="true" kind="portConnection" destination="_RYLx8ViyEeSKJaywiSRplg" source="_RX43EFiyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RY7Y0ViyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RX43EFiyEeSKJaywiSRplg" destination="_RYLx8ViyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.7"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RY7Y0liyEeSKJaywiSRplg" name="voterMain.StatusOut -> norm_bckp_selection.In1" complete="true" kind="portConnection" destination="_RYLx8FiyEeSKJaywiSRplg" source="_RYCA81iyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RY7Y01iyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RYCA81iyEeSKJaywiSRplg" destination="_RYLx8FiyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.8"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RY7Y1FiyEeSKJaywiSRplg" name="norm_bckp_selection.StatusLoss -> StatusLoss" kind="portConnection" destination="_RYU74ViyEeSKJaywiSRplg" source="_RYLx8liyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RY7Y1ViyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RYLx8liyEeSKJaywiSRplg" destination="_RYU74ViyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.10"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_RY7Y1liyEeSKJaywiSRplg" name="norm_bckp_selection.StatusMisleading -> StatusMisleading" kind="portConnection" destination="_RYU74liyEeSKJaywiSRplg" source="_RYLx81iyEeSKJaywiSRplg">
+    <connectionReference xmi:id="_RY7Y11iyEeSKJaywiSRplg" context="_RWizMFiyEeSKJaywiSRplg" source="_RYLx81iyEeSKJaywiSRplg" destination="_RYU74liyEeSKJaywiSRplg">
+      <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.9"/>
+    </connectionReference>
+  </connectionInstance>
+  <systemOperationMode xmi:id="_RYU75ViyEeSKJaywiSRplg" name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:SystemImplementation" href="../packages/model_V2.aadl#model_V2.model_V2.complete"/>
+</instance:SystemInstance>

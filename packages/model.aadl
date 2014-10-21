@@ -82,7 +82,7 @@ properties
 					(voterMain.erroneous and norm_bckp_selection.failed)
 				]->failed;
 				
-				--[ engine1.failed and engine2.failed and engine3.failed]->failed;	
+				[ engine1.failed and engine2.failed and engine3.failed]->failed;	
 		end composite;
 		
 		properties

@@ -39,7 +39,9 @@ system implementation powerplants.impl
 		end composite;
 		
 		properties
-			-- The all engine out condition is picked up in the Fault Tree, but not the FHA?
+			-- The all engine out condition description will be pickup in
+			--     the FTA report, and as the next higher system failed
+			--     in the FHA report 
 			EMV2::severity => ARP4761::Catastrophic applies to failed;
 			ARP4761::hazards => 
 			([
@@ -52,7 +54,7 @@ system implementation powerplants.impl
 			])
 			applies to failed;
 		
-		-- The all engine out condition is picked up in the Fault Tree, but not the FHA?
+		--  How can the two engine out state be listed so it is pickup in the FHA?
 --			EMV2::severity => ARP4761::Hazardous applies to hazardous failure
 --			ARP4761::hazards => 
 --			([

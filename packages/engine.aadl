@@ -31,12 +31,12 @@ system engine
 		end propagations;
 		component error behavior
 			events
-				stop: error event;  -- engine basic failure event
+				eStop: error event;  -- engine basic failure event
 			transitions
-				t1: operative -[stop]-> failed;
+				t1: operative -[eStop]-> failed;
 		end component;
 		properties
-			emv2::occurrencedistribution => [ probabilityvalue => 0.3 ; Distribution => Fixed;] applies to stop;
+			--emv2::occurrencedistribution => [ probabilityvalue => 0.3 ; Distribution => Fixed;] applies to stop;
 			emv2::occurrencedistribution => [ probabilityvalue => 0.31 ; Distribution => Fixed;] applies to failed;
 			
 			EMV2::severity => ARP4761::Minor applies to failed;

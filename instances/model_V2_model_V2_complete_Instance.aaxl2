@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="ASCII"?>
-<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" xmi:id="_mjdkIFo3EeStbr-2I-Mnkg" name="model_V2_complete_Instance" category="system">
-  <featureInstance xmi:id="_mlI_Ilo3EeStbr-2I-Mnkg" name="StatusLoss" dstConnectionInstance="_mlvcEFo3EeStbr-2I-Mnkg" dstFlowSpec="_mlKNQFo3EeStbr-2I-Mnkg" direction="out">
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="model_V2_complete_Instance" category="system">
+  <featureInstance name="StatusLoss" dstConnectionInstance="//@connectionInstance.14" dstFlowSpec="//@flowSpecification.0" direction="out">
     <feature xsi:type="aadl2:DataPort" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
   </featureInstance>
-  <featureInstance xmi:id="_mlJmMFo3EeStbr-2I-Mnkg" name="StatusMisleading" dstConnectionInstance="_mlvcElo3EeStbr-2I-Mnkg" dstFlowSpec="_mlKNQVo3EeStbr-2I-Mnkg" direction="out">
+  <featureInstance name="StatusMisleading" dstConnectionInstance="//@connectionInstance.15" dstFlowSpec="//@flowSpecification.1" direction="out">
     <feature xsi:type="aadl2:DataPort" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
   </featureInstance>
-  <componentInstance xmi:id="_mj8FQFo3EeStbr-2I-Mnkg" name="RT1_1GHz" category="processor">
+  <componentInstance name="RT1_1GHz" category="processor">
     <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.0"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mj96cFo3EeStbr-2I-Mnkg" name="RT2_1GHz" category="processor">
+  <componentInstance name="RT2_1GHz" category="processor">
     <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.1"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mj_IkFo3EeStbr-2I-Mnkg" name="RT3_1GHz" category="processor">
+  <componentInstance name="RT3_1GHz" category="processor">
     <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.2"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mkA9wFo3EeStbr-2I-Mnkg" name="engineSubsystem" category="system">
-    <featureInstance xmi:id="_mkZYQFo3EeStbr-2I-Mnkg" name="engine1_generatorDC" direction="out">
+  <componentInstance name="engineSubsystem" category="system">
+    <featureInstance name="engine1_generatorDC" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance xmi:id="_mkZYQVo3EeStbr-2I-Mnkg" name="engine2_generatorDC_1" direction="out">
+    <featureInstance name="engine2_generatorDC_1" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
-    <featureInstance xmi:id="_mkZ_UFo3EeStbr-2I-Mnkg" name="engine2_generatorDC_2" dstConnectionInstance="_mlfkc1o3EeStbr-2I-Mnkg" direction="out">
+    <featureInstance name="engine2_generatorDC_2" dstConnectionInstance="//@connectionInstance.3" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
     </featureInstance>
-    <featureInstance xmi:id="_mkamYFo3EeStbr-2I-Mnkg" name="engine3_generatorDC" direction="out">
+    <featureInstance name="engine3_generatorDC" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
     </featureInstance>
-    <componentInstance xmi:id="_mkJgoFo3EeStbr-2I-Mnkg" name="engine1" category="system">
-      <featureInstance xmi:id="_mkSqkFo3EeStbr-2I-Mnkg" name="generatorDC" srcConnectionInstance="_mldIMFo3EeStbr-2I-Mnkg" dstFlowSpec="_mkVG0Fo3EeStbr-2I-Mnkg" direction="out">
+    <componentInstance name="engine1" category="system">
+      <featureInstance name="generatorDC" srcConnectionInstance="//@connectionInstance.0" dstFlowSpec="//@componentInstance.3/@componentInstance.0/@flowSpecification.0" direction="out">
         <feature xsi:type="aadl2:DataPort" href="../packages/engine.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
       </featureInstance>
-      <flowSpecification xmi:id="_mkVG0Fo3EeStbr-2I-Mnkg" name="fl1" destination="_mkSqkFo3EeStbr-2I-Mnkg">
+      <flowSpecification name="fl1" destination="//@componentInstance.3/@componentInstance.0/@featureInstance.0">
         <flowSpecification href="../packages/engine.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
       </flowSpecification>
       <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0"/>
       <index>0</index>
     </componentInstance>
-    <componentInstance xmi:id="_mkVt4Fo3EeStbr-2I-Mnkg" name="engine2" category="system">
-      <featureInstance xmi:id="_mkW8AFo3EeStbr-2I-Mnkg" name="generatorDC" srcConnectionInstance="_mleWUFo3EeStbr-2I-Mnkg _mlfkcFo3EeStbr-2I-Mnkg _mlfkc1o3EeStbr-2I-Mnkg" dstFlowSpec="_mkW8AVo3EeStbr-2I-Mnkg" direction="out">
+    <componentInstance name="engine2" category="system">
+      <featureInstance name="generatorDC" srcConnectionInstance="//@connectionInstance.1 //@connectionInstance.2 //@connectionInstance.3" dstFlowSpec="//@componentInstance.3/@componentInstance.1/@flowSpecification.0" direction="out">
         <feature xsi:type="aadl2:DataPort" href="../packages/engine.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
       </featureInstance>
-      <flowSpecification xmi:id="_mkW8AVo3EeStbr-2I-Mnkg" name="fl1" destination="_mkW8AFo3EeStbr-2I-Mnkg">
+      <flowSpecification name="fl1" destination="//@componentInstance.3/@componentInstance.1/@featureInstance.0">
         <flowSpecification href="../packages/engine.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
       </flowSpecification>
       <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.1"/>
       <index>0</index>
     </componentInstance>
-    <componentInstance xmi:id="_mkXjEFo3EeStbr-2I-Mnkg" name="engine3" category="system">
-      <featureInstance xmi:id="_mkYxMFo3EeStbr-2I-Mnkg" name="generatorDC" srcConnectionInstance="_mliAsFo3EeStbr-2I-Mnkg" dstFlowSpec="_mkYxMVo3EeStbr-2I-Mnkg" direction="out">
+    <componentInstance name="engine3" category="system">
+      <featureInstance name="generatorDC" srcConnectionInstance="//@connectionInstance.4" dstFlowSpec="//@componentInstance.3/@componentInstance.2/@flowSpecification.0" direction="out">
         <feature xsi:type="aadl2:DataPort" href="../packages/engine.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
       </featureInstance>
-      <flowSpecification xmi:id="_mkYxMVo3EeStbr-2I-Mnkg" name="fl1" destination="_mkYxMFo3EeStbr-2I-Mnkg">
+      <flowSpecification name="fl1" destination="//@componentInstance.3/@componentInstance.2/@featureInstance.0">
         <flowSpecification href="../packages/engine.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
       </flowSpecification>
       <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.2"/>
@@ -64,328 +64,328 @@
     <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.0"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mkamYVo3EeStbr-2I-Mnkg" name="powerSupply1" category="system">
-    <featureInstance xmi:id="_mkgF8Fo3EeStbr-2I-Mnkg" name="DC28VoltRawIn" dstConnectionInstance="_mldIMFo3EeStbr-2I-Mnkg" srcFlowSpec="_mkgtAFo3EeStbr-2I-Mnkg">
+  <componentInstance name="powerSupply1" category="system">
+    <featureInstance name="DC28VoltRawIn" dstConnectionInstance="//@connectionInstance.0" srcFlowSpec="//@componentInstance.4/@flowSpecification.0">
       <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance xmi:id="_mkgF8Vo3EeStbr-2I-Mnkg" name="DC28VoltOut" srcConnectionInstance="_mlj14Fo3EeStbr-2I-Mnkg" dstFlowSpec="_mkgtAVo3EeStbr-2I-Mnkg" direction="out">
+    <featureInstance name="DC28VoltOut" srcConnectionInstance="//@connectionInstance.5" dstFlowSpec="//@componentInstance.4/@flowSpecification.1" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
-    <flowSpecification xmi:id="_mkgtAFo3EeStbr-2I-Mnkg" name="fl1" source="_mkgF8Fo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl1" source="//@componentInstance.4/@featureInstance.0">
       <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mkgtAVo3EeStbr-2I-Mnkg" name="fl2" destination="_mkgF8Vo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl2" destination="//@componentInstance.4/@featureInstance.1">
       <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
     </flowSpecification>
     <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.1"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mkhUEFo3EeStbr-2I-Mnkg" name="powerSupply2" category="system">
-    <featureInstance xmi:id="_mkh7IFo3EeStbr-2I-Mnkg" name="DC28VoltRawIn" dstConnectionInstance="_mleWUFo3EeStbr-2I-Mnkg" srcFlowSpec="_mkiiMVo3EeStbr-2I-Mnkg">
+  <componentInstance name="powerSupply2" category="system">
+    <featureInstance name="DC28VoltRawIn" dstConnectionInstance="//@connectionInstance.1" srcFlowSpec="//@componentInstance.5/@flowSpecification.0">
       <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance xmi:id="_mkiiMFo3EeStbr-2I-Mnkg" name="DC28VoltOut" srcConnectionInstance="_mllEAFo3EeStbr-2I-Mnkg" dstFlowSpec="_mkiiMlo3EeStbr-2I-Mnkg" direction="out">
+    <featureInstance name="DC28VoltOut" srcConnectionInstance="//@connectionInstance.6" dstFlowSpec="//@componentInstance.5/@flowSpecification.1" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
-    <flowSpecification xmi:id="_mkiiMVo3EeStbr-2I-Mnkg" name="fl1" source="_mkh7IFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl1" source="//@componentInstance.5/@featureInstance.0">
       <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mkiiMlo3EeStbr-2I-Mnkg" name="fl2" destination="_mkiiMFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl2" destination="//@componentInstance.5/@featureInstance.1">
       <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
     </flowSpecification>
     <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.2"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mkiiM1o3EeStbr-2I-Mnkg" name="powerSupply3" category="system">
-    <featureInstance xmi:id="_mkjwUFo3EeStbr-2I-Mnkg" name="DC28VoltRawIn" dstConnectionInstance="_mlfkcFo3EeStbr-2I-Mnkg" srcFlowSpec="_mkkXYFo3EeStbr-2I-Mnkg">
+  <componentInstance name="powerSupply3" category="system">
+    <featureInstance name="DC28VoltRawIn" dstConnectionInstance="//@connectionInstance.2" srcFlowSpec="//@componentInstance.6/@flowSpecification.0">
       <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance xmi:id="_mkjwUVo3EeStbr-2I-Mnkg" name="DC28VoltOut" srcConnectionInstance="_mlmSIFo3EeStbr-2I-Mnkg" dstFlowSpec="_mkkXYVo3EeStbr-2I-Mnkg" direction="out">
+    <featureInstance name="DC28VoltOut" srcConnectionInstance="//@connectionInstance.7" dstFlowSpec="//@componentInstance.6/@flowSpecification.1" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
-    <flowSpecification xmi:id="_mkkXYFo3EeStbr-2I-Mnkg" name="fl1" source="_mkjwUFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl1" source="//@componentInstance.6/@featureInstance.0">
       <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mkkXYVo3EeStbr-2I-Mnkg" name="fl2" destination="_mkjwUVo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl2" destination="//@componentInstance.6/@featureInstance.1">
       <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
     </flowSpecification>
     <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.3"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mkkXYlo3EeStbr-2I-Mnkg" name="powerSupply4" category="system">
-    <featureInstance xmi:id="_mkllgFo3EeStbr-2I-Mnkg" name="DC28VoltRawIn" dstConnectionInstance="_mliAsFo3EeStbr-2I-Mnkg" srcFlowSpec="_mkmMkFo3EeStbr-2I-Mnkg">
+  <componentInstance name="powerSupply4" category="system">
+    <featureInstance name="DC28VoltRawIn" dstConnectionInstance="//@connectionInstance.4" srcFlowSpec="//@componentInstance.7/@flowSpecification.0">
       <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance xmi:id="_mkllgVo3EeStbr-2I-Mnkg" name="DC28VoltOut" srcConnectionInstance="_mloHUFo3EeStbr-2I-Mnkg" dstFlowSpec="_mkmMkVo3EeStbr-2I-Mnkg" direction="out">
+    <featureInstance name="DC28VoltOut" srcConnectionInstance="//@connectionInstance.8" dstFlowSpec="//@componentInstance.7/@flowSpecification.1" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
-    <flowSpecification xmi:id="_mkmMkFo3EeStbr-2I-Mnkg" name="fl1" source="_mkllgFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl1" source="//@componentInstance.7/@featureInstance.0">
       <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mkmMkVo3EeStbr-2I-Mnkg" name="fl2" destination="_mkllgVo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl2" destination="//@componentInstance.7/@featureInstance.1">
       <flowSpecification href="../packages/powerSupply.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
     </flowSpecification>
     <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.4"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mkmzoFo3EeStbr-2I-Mnkg" name="mainComputer1" category="system">
-    <ownedPropertyAssociation xmi:id="_mmoz8Fo3EeStbr-2I-Mnkg">
+  <componentInstance name="mainComputer1" category="system">
+    <ownedPropertyAssociation>
       <property href="../../Plugin_Resources/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
-      <ownedValue xmi:id="_mmoz8Vo3EeStbr-2I-Mnkg">
-        <ownedValue xsi:type="aadl2:ListValue" xmi:id="_mmoz8lo3EeStbr-2I-Mnkg">
-          <ownedListElement xsi:type="instance:InstanceReferenceValue" xmi:id="_mmoz81o3EeStbr-2I-Mnkg" referencedInstanceObject="_mj96cFo3EeStbr-2I-Mnkg"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:ListValue">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1"/>
         </ownedValue>
       </ownedValue>
     </ownedPropertyAssociation>
-    <featureInstance xmi:id="_mkthUFo3EeStbr-2I-Mnkg" name="powerIn" dstConnectionInstance="_mlj14Fo3EeStbr-2I-Mnkg" srcFlowSpec="_mkuvcFo3EeStbr-2I-Mnkg">
+    <featureInstance name="powerIn" dstConnectionInstance="//@connectionInstance.5" srcFlowSpec="//@componentInstance.8/@flowSpecification.0">
       <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance xmi:id="_mkuIYFo3EeStbr-2I-Mnkg" name="statusOut" srcConnectionInstance="_mlpVcFo3EeStbr-2I-Mnkg" dstFlowSpec="_mkuvcVo3EeStbr-2I-Mnkg" direction="out">
+    <featureInstance name="statusOut" srcConnectionInstance="//@connectionInstance.9" dstFlowSpec="//@componentInstance.8/@flowSpecification.1" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
-    <flowSpecification xmi:id="_mkuvcFo3EeStbr-2I-Mnkg" name="fl1" source="_mkthUFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl1" source="//@componentInstance.8/@featureInstance.0">
       <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mkuvcVo3EeStbr-2I-Mnkg" name="fl2" destination="_mkuIYFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl2" destination="//@componentInstance.8/@featureInstance.1">
       <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
     </flowSpecification>
     <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.5"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mkuvclo3EeStbr-2I-Mnkg" name="mainComputer2" category="system">
-    <ownedPropertyAssociation xmi:id="_mmqpIFo3EeStbr-2I-Mnkg">
+  <componentInstance name="mainComputer2" category="system">
+    <ownedPropertyAssociation>
       <property href="../../Plugin_Resources/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
-      <ownedValue xmi:id="_mmqpIVo3EeStbr-2I-Mnkg">
-        <ownedValue xsi:type="aadl2:ListValue" xmi:id="_mmqpIlo3EeStbr-2I-Mnkg">
-          <ownedListElement xsi:type="instance:InstanceReferenceValue" xmi:id="_mmqpI1o3EeStbr-2I-Mnkg" referencedInstanceObject="_mj96cFo3EeStbr-2I-Mnkg"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:ListValue">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1"/>
         </ownedValue>
       </ownedValue>
     </ownedPropertyAssociation>
-    <featureInstance xmi:id="_mkv9kFo3EeStbr-2I-Mnkg" name="powerIn" dstConnectionInstance="_mllEAFo3EeStbr-2I-Mnkg" srcFlowSpec="_mkwkoFo3EeStbr-2I-Mnkg">
+    <featureInstance name="powerIn" dstConnectionInstance="//@connectionInstance.6" srcFlowSpec="//@componentInstance.9/@flowSpecification.0">
       <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance xmi:id="_mkv9kVo3EeStbr-2I-Mnkg" name="statusOut" srcConnectionInstance="_mlqjkFo3EeStbr-2I-Mnkg" dstFlowSpec="_mkwkoVo3EeStbr-2I-Mnkg" direction="out">
+    <featureInstance name="statusOut" srcConnectionInstance="//@connectionInstance.10" dstFlowSpec="//@componentInstance.9/@flowSpecification.1" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
-    <flowSpecification xmi:id="_mkwkoFo3EeStbr-2I-Mnkg" name="fl1" source="_mkv9kFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl1" source="//@componentInstance.9/@featureInstance.0">
       <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mkwkoVo3EeStbr-2I-Mnkg" name="fl2" destination="_mkv9kVo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl2" destination="//@componentInstance.9/@featureInstance.1">
       <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
     </flowSpecification>
     <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.6"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mkwkolo3EeStbr-2I-Mnkg" name="mainComputer3" category="system">
-    <ownedPropertyAssociation xmi:id="_mmseUFo3EeStbr-2I-Mnkg">
+  <componentInstance name="mainComputer3" category="system">
+    <ownedPropertyAssociation>
       <property href="../../Plugin_Resources/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
-      <ownedValue xmi:id="_mmseUVo3EeStbr-2I-Mnkg">
-        <ownedValue xsi:type="aadl2:ListValue" xmi:id="_mmseUlo3EeStbr-2I-Mnkg">
-          <ownedListElement xsi:type="instance:InstanceReferenceValue" xmi:id="_mmseU1o3EeStbr-2I-Mnkg" referencedInstanceObject="_mj96cFo3EeStbr-2I-Mnkg"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:ListValue">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1"/>
         </ownedValue>
       </ownedValue>
     </ownedPropertyAssociation>
-    <featureInstance xmi:id="_mkxywFo3EeStbr-2I-Mnkg" name="powerIn" dstConnectionInstance="_mlmSIFo3EeStbr-2I-Mnkg" srcFlowSpec="_mkyZ0Vo3EeStbr-2I-Mnkg">
+    <featureInstance name="powerIn" dstConnectionInstance="//@connectionInstance.7" srcFlowSpec="//@componentInstance.10/@flowSpecification.0">
       <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance xmi:id="_mkyZ0Fo3EeStbr-2I-Mnkg" name="statusOut" srcConnectionInstance="_mlsYwFo3EeStbr-2I-Mnkg" dstFlowSpec="_mkzA4Fo3EeStbr-2I-Mnkg" direction="out">
+    <featureInstance name="statusOut" srcConnectionInstance="//@connectionInstance.11" dstFlowSpec="//@componentInstance.10/@flowSpecification.1" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
-    <flowSpecification xmi:id="_mkyZ0Vo3EeStbr-2I-Mnkg" name="fl1" source="_mkxywFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl1" source="//@componentInstance.10/@featureInstance.0">
       <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mkzA4Fo3EeStbr-2I-Mnkg" name="fl2" destination="_mkyZ0Fo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl2" destination="//@componentInstance.10/@featureInstance.1">
       <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
     </flowSpecification>
     <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.7"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mkzA4Vo3EeStbr-2I-Mnkg" name="mainComputer4" category="system">
-    <ownedPropertyAssociation xmi:id="_mmuTgFo3EeStbr-2I-Mnkg">
+  <componentInstance name="mainComputer4" category="system">
+    <ownedPropertyAssociation>
       <property href="../../Plugin_Resources/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
-      <ownedValue xmi:id="_mmuTgVo3EeStbr-2I-Mnkg">
-        <ownedValue xsi:type="aadl2:ListValue" xmi:id="_mmuTglo3EeStbr-2I-Mnkg">
-          <ownedListElement xsi:type="instance:InstanceReferenceValue" xmi:id="_mmuTg1o3EeStbr-2I-Mnkg" referencedInstanceObject="_mj_IkFo3EeStbr-2I-Mnkg"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:ListValue">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2"/>
         </ownedValue>
       </ownedValue>
     </ownedPropertyAssociation>
-    <featureInstance xmi:id="_mkzn8Fo3EeStbr-2I-Mnkg" name="powerIn" dstConnectionInstance="_mloHUFo3EeStbr-2I-Mnkg" srcFlowSpec="_mk02EFo3EeStbr-2I-Mnkg">
+    <featureInstance name="powerIn" dstConnectionInstance="//@connectionInstance.8" srcFlowSpec="//@componentInstance.11/@flowSpecification.0">
       <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance xmi:id="_mk0PAFo3EeStbr-2I-Mnkg" name="statusOut" srcConnectionInstance="_mltm4Fo3EeStbr-2I-Mnkg" dstFlowSpec="_mk02EVo3EeStbr-2I-Mnkg" direction="out">
+    <featureInstance name="statusOut" srcConnectionInstance="//@connectionInstance.12" dstFlowSpec="//@componentInstance.11/@flowSpecification.1" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
-    <flowSpecification xmi:id="_mk02EFo3EeStbr-2I-Mnkg" name="fl1" source="_mkzn8Fo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl1" source="//@componentInstance.11/@featureInstance.0">
       <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mk02EVo3EeStbr-2I-Mnkg" name="fl2" destination="_mk0PAFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl2" destination="//@componentInstance.11/@featureInstance.1">
       <flowSpecification href="../packages/computer.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
     </flowSpecification>
     <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.8"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mk02Elo3EeStbr-2I-Mnkg" name="voterMain" category="system">
-    <ownedPropertyAssociation xmi:id="_mmwIsFo3EeStbr-2I-Mnkg">
+  <componentInstance name="voterMain" category="system">
+    <ownedPropertyAssociation>
       <property href="../../Plugin_Resources/Deployment_Properties.aadl#Deployment_Properties.Allowed_Processor_Binding"/>
-      <ownedValue xmi:id="_mmwIsVo3EeStbr-2I-Mnkg">
-        <ownedValue xsi:type="aadl2:ListValue" xmi:id="_mmwIslo3EeStbr-2I-Mnkg">
-          <ownedListElement xsi:type="instance:InstanceReferenceValue" xmi:id="_mmwIs1o3EeStbr-2I-Mnkg" referencedInstanceObject="_mj8FQFo3EeStbr-2I-Mnkg"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:ListValue">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0"/>
         </ownedValue>
       </ownedValue>
     </ownedPropertyAssociation>
-    <featureInstance xmi:id="_mk-AAFo3EeStbr-2I-Mnkg" name="In1" dstConnectionInstance="_mlpVcFo3EeStbr-2I-Mnkg" srcFlowSpec="_mk_OIVo3EeStbr-2I-Mnkg">
+    <featureInstance name="In1" dstConnectionInstance="//@connectionInstance.9" srcFlowSpec="//@componentInstance.12/@flowSpecification.0">
       <feature xsi:type="aadl2:DataPort" href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance xmi:id="_mk-nEFo3EeStbr-2I-Mnkg" name="In2" dstConnectionInstance="_mlqjkFo3EeStbr-2I-Mnkg" srcFlowSpec="_mk_1MFo3EeStbr-2I-Mnkg">
+    <featureInstance name="In2" dstConnectionInstance="//@connectionInstance.10" srcFlowSpec="//@componentInstance.12/@flowSpecification.1">
       <feature xsi:type="aadl2:DataPort" href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
-    <featureInstance xmi:id="_mk-nEVo3EeStbr-2I-Mnkg" name="In3" dstConnectionInstance="_mlsYwFo3EeStbr-2I-Mnkg" srcFlowSpec="_mk_1MVo3EeStbr-2I-Mnkg">
+    <featureInstance name="In3" dstConnectionInstance="//@connectionInstance.11" srcFlowSpec="//@componentInstance.12/@flowSpecification.2">
       <feature xsi:type="aadl2:DataPort" href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
     </featureInstance>
-    <featureInstance xmi:id="_mk_OIFo3EeStbr-2I-Mnkg" name="StatusOut" srcConnectionInstance="_mlu1AFo3EeStbr-2I-Mnkg" dstFlowSpec="_mk_1Mlo3EeStbr-2I-Mnkg" direction="out">
+    <featureInstance name="StatusOut" srcConnectionInstance="//@connectionInstance.13" dstFlowSpec="//@componentInstance.12/@flowSpecification.3" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
     </featureInstance>
-    <flowSpecification xmi:id="_mk_OIVo3EeStbr-2I-Mnkg" name="f1" source="_mk-AAFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="f1" source="//@componentInstance.12/@featureInstance.0">
       <flowSpecification href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mk_1MFo3EeStbr-2I-Mnkg" name="f2" source="_mk-nEFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="f2" source="//@componentInstance.12/@featureInstance.1">
       <flowSpecification href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mk_1MVo3EeStbr-2I-Mnkg" name="f3" source="_mk-nEVo3EeStbr-2I-Mnkg">
+    <flowSpecification name="f3" source="//@componentInstance.12/@featureInstance.2">
       <flowSpecification href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.2"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mk_1Mlo3EeStbr-2I-Mnkg" name="f4" destination="_mk_OIFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="f4" destination="//@componentInstance.12/@featureInstance.3">
       <flowSpecification href="../packages/voter.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.3"/>
     </flowSpecification>
     <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.9"/>
     <index>0</index>
   </componentInstance>
-  <componentInstance xmi:id="_mk_1M1o3EeStbr-2I-Mnkg" name="norm_bckp_selection" category="system">
-    <featureInstance xmi:id="_mlGi4Fo3EeStbr-2I-Mnkg" name="In1" dstConnectionInstance="_mlu1AFo3EeStbr-2I-Mnkg" srcFlowSpec="_mlIYEFo3EeStbr-2I-Mnkg">
+  <componentInstance name="norm_bckp_selection" category="system">
+    <featureInstance name="In1" dstConnectionInstance="//@connectionInstance.13" srcFlowSpec="//@componentInstance.13/@flowSpecification.0">
       <feature xsi:type="aadl2:DataPort" href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance xmi:id="_mlHJ8Fo3EeStbr-2I-Mnkg" name="In2" dstConnectionInstance="_mltm4Fo3EeStbr-2I-Mnkg" srcFlowSpec="_mlIYEVo3EeStbr-2I-Mnkg">
+    <featureInstance name="In2" dstConnectionInstance="//@connectionInstance.12" srcFlowSpec="//@componentInstance.13/@flowSpecification.1">
       <feature xsi:type="aadl2:DataPort" href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
-    <featureInstance xmi:id="_mlHJ8Vo3EeStbr-2I-Mnkg" name="StatusLoss" srcConnectionInstance="_mlvcEFo3EeStbr-2I-Mnkg" dstFlowSpec="_mlI_IFo3EeStbr-2I-Mnkg" direction="out">
+    <featureInstance name="StatusLoss" srcConnectionInstance="//@connectionInstance.14" dstFlowSpec="//@componentInstance.13/@flowSpecification.2" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
     </featureInstance>
-    <featureInstance xmi:id="_mlHxAFo3EeStbr-2I-Mnkg" name="StatusMisleading" srcConnectionInstance="_mlvcElo3EeStbr-2I-Mnkg" dstFlowSpec="_mlI_IVo3EeStbr-2I-Mnkg" direction="out">
+    <featureInstance name="StatusMisleading" srcConnectionInstance="//@connectionInstance.15" dstFlowSpec="//@componentInstance.13/@flowSpecification.3" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
     </featureInstance>
-    <flowSpecification xmi:id="_mlIYEFo3EeStbr-2I-Mnkg" name="fl1" source="_mlGi4Fo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl1" source="//@componentInstance.13/@featureInstance.0">
       <flowSpecification href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.0"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mlIYEVo3EeStbr-2I-Mnkg" name="fl2" source="_mlHJ8Fo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl2" source="//@componentInstance.13/@featureInstance.1">
       <flowSpecification href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.1"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mlI_IFo3EeStbr-2I-Mnkg" name="fl3" destination="_mlHJ8Vo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl3" destination="//@componentInstance.13/@featureInstance.2">
       <flowSpecification href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.2"/>
     </flowSpecification>
-    <flowSpecification xmi:id="_mlI_IVo3EeStbr-2I-Mnkg" name="fl4" destination="_mlHxAFo3EeStbr-2I-Mnkg">
+    <flowSpecification name="fl4" destination="//@componentInstance.13/@featureInstance.3">
       <flowSpecification href="../packages/switching.aadl#//@ownedPublicSection/@ownedClassifier.0/@ownedFlowSpecification.3"/>
     </flowSpecification>
     <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedSystemSubcomponent.10"/>
     <index>0</index>
   </componentInstance>
-  <flowSpecification xmi:id="_mlKNQFo3EeStbr-2I-Mnkg" name="fls1" destination="_mlI_Ilo3EeStbr-2I-Mnkg">
+  <flowSpecification name="fls1" destination="//@featureInstance.0">
     <flowSpecification href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.0"/>
   </flowSpecification>
-  <flowSpecification xmi:id="_mlKNQVo3EeStbr-2I-Mnkg" name="fls2" destination="_mlJmMFo3EeStbr-2I-Mnkg">
+  <flowSpecification name="fls2" destination="//@featureInstance.1">
     <flowSpecification href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.2/@ownedFlowSpecification.1"/>
   </flowSpecification>
-  <connectionInstance xmi:id="_mldIMFo3EeStbr-2I-Mnkg" name="engineSubsystem.engine1.generatorDC -> powerSupply1.DC28VoltRawIn" complete="true" kind="portConnection" destination="_mkgF8Fo3EeStbr-2I-Mnkg" source="_mkSqkFo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mldIMVo3EeStbr-2I-Mnkg" context="_mkA9wFo3EeStbr-2I-Mnkg" source="_mkSqkFo3EeStbr-2I-Mnkg" destination="_mkZYQFo3EeStbr-2I-Mnkg">
+  <connectionInstance name="engineSubsystem.engine1.generatorDC -> powerSupply1.DC28VoltRawIn" complete="true" kind="portConnection" destination="//@componentInstance.4/@featureInstance.0" source="//@componentInstance.3/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.3" source="//@componentInstance.3/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.3/@featureInstance.0">
       <connection xsi:type="aadl2:PortConnection" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
     </connectionReference>
-    <connectionReference xmi:id="_mldIMlo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mkZYQFo3EeStbr-2I-Mnkg" destination="_mkgF8Fo3EeStbr-2I-Mnkg">
+    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.0" destination="//@componentInstance.4/@featureInstance.0">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.12"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mleWUFo3EeStbr-2I-Mnkg" name="engineSubsystem.engine2.generatorDC -> powerSupply2.DC28VoltRawIn" complete="true" kind="portConnection" destination="_mkh7IFo3EeStbr-2I-Mnkg" source="_mkW8AFo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mleWUVo3EeStbr-2I-Mnkg" context="_mkA9wFo3EeStbr-2I-Mnkg" source="_mkW8AFo3EeStbr-2I-Mnkg" destination="_mkZYQVo3EeStbr-2I-Mnkg">
+  <connectionInstance name="engineSubsystem.engine2.generatorDC -> powerSupply2.DC28VoltRawIn" complete="true" kind="portConnection" destination="//@componentInstance.5/@featureInstance.0" source="//@componentInstance.3/@componentInstance.1/@featureInstance.0">
+    <connectionReference context="//@componentInstance.3" source="//@componentInstance.3/@componentInstance.1/@featureInstance.0" destination="//@componentInstance.3/@featureInstance.1">
       <connection xsi:type="aadl2:PortConnection" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
     </connectionReference>
-    <connectionReference xmi:id="_mleWUlo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mkZYQVo3EeStbr-2I-Mnkg" destination="_mkh7IFo3EeStbr-2I-Mnkg">
+    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.1" destination="//@componentInstance.5/@featureInstance.0">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.13"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mlfkcFo3EeStbr-2I-Mnkg" name="engineSubsystem.engine2.generatorDC -> powerSupply3.DC28VoltRawIn" complete="true" kind="portConnection" destination="_mkjwUFo3EeStbr-2I-Mnkg" source="_mkW8AFo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mlfkcVo3EeStbr-2I-Mnkg" context="_mkA9wFo3EeStbr-2I-Mnkg" source="_mkW8AFo3EeStbr-2I-Mnkg" destination="_mkZYQVo3EeStbr-2I-Mnkg">
+  <connectionInstance name="engineSubsystem.engine2.generatorDC -> powerSupply3.DC28VoltRawIn" complete="true" kind="portConnection" destination="//@componentInstance.6/@featureInstance.0" source="//@componentInstance.3/@componentInstance.1/@featureInstance.0">
+    <connectionReference context="//@componentInstance.3" source="//@componentInstance.3/@componentInstance.1/@featureInstance.0" destination="//@componentInstance.3/@featureInstance.1">
       <connection xsi:type="aadl2:PortConnection" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
     </connectionReference>
-    <connectionReference xmi:id="_mlfkclo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mkZYQVo3EeStbr-2I-Mnkg" destination="_mkjwUFo3EeStbr-2I-Mnkg">
+    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.1" destination="//@componentInstance.6/@featureInstance.0">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.14"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mlfkc1o3EeStbr-2I-Mnkg" name="engineSubsystem.engine2.generatorDC -> engineSubsystem.engine2_generatorDC_2" kind="portConnection" destination="_mkZ_UFo3EeStbr-2I-Mnkg" source="_mkW8AFo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mlfkdFo3EeStbr-2I-Mnkg" context="_mkA9wFo3EeStbr-2I-Mnkg" source="_mkW8AFo3EeStbr-2I-Mnkg" destination="_mkZ_UFo3EeStbr-2I-Mnkg">
+  <connectionInstance name="engineSubsystem.engine2.generatorDC -> engineSubsystem.engine2_generatorDC_2" kind="portConnection" destination="//@componentInstance.3/@featureInstance.2" source="//@componentInstance.3/@componentInstance.1/@featureInstance.0">
+    <connectionReference context="//@componentInstance.3" source="//@componentInstance.3/@componentInstance.1/@featureInstance.0" destination="//@componentInstance.3/@featureInstance.2">
       <connection xsi:type="aadl2:PortConnection" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.2"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mliAsFo3EeStbr-2I-Mnkg" name="engineSubsystem.engine3.generatorDC -> powerSupply4.DC28VoltRawIn" complete="true" kind="portConnection" destination="_mkllgFo3EeStbr-2I-Mnkg" source="_mkYxMFo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mliAsVo3EeStbr-2I-Mnkg" context="_mkA9wFo3EeStbr-2I-Mnkg" source="_mkYxMFo3EeStbr-2I-Mnkg" destination="_mkamYFo3EeStbr-2I-Mnkg">
+  <connectionInstance name="engineSubsystem.engine3.generatorDC -> powerSupply4.DC28VoltRawIn" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.3/@componentInstance.2/@featureInstance.0">
+    <connectionReference context="//@componentInstance.3" source="//@componentInstance.3/@componentInstance.2/@featureInstance.0" destination="//@componentInstance.3/@featureInstance.3">
       <connection xsi:type="aadl2:PortConnection" href="../packages/powerplants.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
     </connectionReference>
-    <connectionReference xmi:id="_mliAslo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mkamYFo3EeStbr-2I-Mnkg" destination="_mkllgFo3EeStbr-2I-Mnkg">
+    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.3" destination="//@componentInstance.7/@featureInstance.0">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.11"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mlj14Fo3EeStbr-2I-Mnkg" name="powerSupply1.DC28VoltOut -> mainComputer1.powerIn" complete="true" kind="portConnection" destination="_mkthUFo3EeStbr-2I-Mnkg" source="_mkgF8Vo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mlj14Vo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mkgF8Vo3EeStbr-2I-Mnkg" destination="_mkthUFo3EeStbr-2I-Mnkg">
+  <connectionInstance name="powerSupply1.DC28VoltOut -> mainComputer1.powerIn" complete="true" kind="portConnection" destination="//@componentInstance.8/@featureInstance.0" source="//@componentInstance.4/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.4/@featureInstance.1" destination="//@componentInstance.8/@featureInstance.0">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.3"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mllEAFo3EeStbr-2I-Mnkg" name="powerSupply2.DC28VoltOut -> mainComputer2.powerIn" complete="true" kind="portConnection" destination="_mkv9kFo3EeStbr-2I-Mnkg" source="_mkiiMFo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mllEAVo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mkiiMFo3EeStbr-2I-Mnkg" destination="_mkv9kFo3EeStbr-2I-Mnkg">
+  <connectionInstance name="powerSupply2.DC28VoltOut -> mainComputer2.powerIn" complete="true" kind="portConnection" destination="//@componentInstance.9/@featureInstance.0" source="//@componentInstance.5/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.5/@featureInstance.1" destination="//@componentInstance.9/@featureInstance.0">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.2"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mlmSIFo3EeStbr-2I-Mnkg" name="powerSupply3.DC28VoltOut -> mainComputer3.powerIn" complete="true" kind="portConnection" destination="_mkxywFo3EeStbr-2I-Mnkg" source="_mkjwUVo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mlmSIVo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mkjwUVo3EeStbr-2I-Mnkg" destination="_mkxywFo3EeStbr-2I-Mnkg">
+  <connectionInstance name="powerSupply3.DC28VoltOut -> mainComputer3.powerIn" complete="true" kind="portConnection" destination="//@componentInstance.10/@featureInstance.0" source="//@componentInstance.6/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.6/@featureInstance.1" destination="//@componentInstance.10/@featureInstance.0">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.1"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mloHUFo3EeStbr-2I-Mnkg" name="powerSupply4.DC28VoltOut -> mainComputer4.powerIn" complete="true" kind="portConnection" destination="_mkzn8Fo3EeStbr-2I-Mnkg" source="_mkllgVo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mloHUVo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mkllgVo3EeStbr-2I-Mnkg" destination="_mkzn8Fo3EeStbr-2I-Mnkg">
+  <connectionInstance name="powerSupply4.DC28VoltOut -> mainComputer4.powerIn" complete="true" kind="portConnection" destination="//@componentInstance.11/@featureInstance.0" source="//@componentInstance.7/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.1" destination="//@componentInstance.11/@featureInstance.0">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.0"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mlpVcFo3EeStbr-2I-Mnkg" name="mainComputer1.statusOut -> voterMain.In1" complete="true" kind="portConnection" destination="_mk-AAFo3EeStbr-2I-Mnkg" source="_mkuIYFo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mlpVcVo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mkuIYFo3EeStbr-2I-Mnkg" destination="_mk-AAFo3EeStbr-2I-Mnkg">
+  <connectionInstance name="mainComputer1.statusOut -> voterMain.In1" complete="true" kind="portConnection" destination="//@componentInstance.12/@featureInstance.0" source="//@componentInstance.8/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.8/@featureInstance.1" destination="//@componentInstance.12/@featureInstance.0">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.4"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mlqjkFo3EeStbr-2I-Mnkg" name="mainComputer2.statusOut -> voterMain.In2" complete="true" kind="portConnection" destination="_mk-nEFo3EeStbr-2I-Mnkg" source="_mkv9kVo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mlqjkVo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mkv9kVo3EeStbr-2I-Mnkg" destination="_mk-nEFo3EeStbr-2I-Mnkg">
+  <connectionInstance name="mainComputer2.statusOut -> voterMain.In2" complete="true" kind="portConnection" destination="//@componentInstance.12/@featureInstance.1" source="//@componentInstance.9/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.9/@featureInstance.1" destination="//@componentInstance.12/@featureInstance.1">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.5"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mlsYwFo3EeStbr-2I-Mnkg" name="mainComputer3.statusOut -> voterMain.In3" complete="true" kind="portConnection" destination="_mk-nEVo3EeStbr-2I-Mnkg" source="_mkyZ0Fo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mlsYwVo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mkyZ0Fo3EeStbr-2I-Mnkg" destination="_mk-nEVo3EeStbr-2I-Mnkg">
+  <connectionInstance name="mainComputer3.statusOut -> voterMain.In3" complete="true" kind="portConnection" destination="//@componentInstance.12/@featureInstance.2" source="//@componentInstance.10/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.10/@featureInstance.1" destination="//@componentInstance.12/@featureInstance.2">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.6"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mltm4Fo3EeStbr-2I-Mnkg" name="mainComputer4.statusOut -> norm_bckp_selection.In2" complete="true" kind="portConnection" destination="_mlHJ8Fo3EeStbr-2I-Mnkg" source="_mk0PAFo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mltm4Vo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mk0PAFo3EeStbr-2I-Mnkg" destination="_mlHJ8Fo3EeStbr-2I-Mnkg">
+  <connectionInstance name="mainComputer4.statusOut -> norm_bckp_selection.In2" complete="true" kind="portConnection" destination="//@componentInstance.13/@featureInstance.1" source="//@componentInstance.11/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.11/@featureInstance.1" destination="//@componentInstance.13/@featureInstance.1">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.7"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mlu1AFo3EeStbr-2I-Mnkg" name="voterMain.StatusOut -> norm_bckp_selection.In1" complete="true" kind="portConnection" destination="_mlGi4Fo3EeStbr-2I-Mnkg" source="_mk_OIFo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mlu1AVo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mk_OIFo3EeStbr-2I-Mnkg" destination="_mlGi4Fo3EeStbr-2I-Mnkg">
+  <connectionInstance name="voterMain.StatusOut -> norm_bckp_selection.In1" complete="true" kind="portConnection" destination="//@componentInstance.13/@featureInstance.0" source="//@componentInstance.12/@featureInstance.3">
+    <connectionReference context="/" source="//@componentInstance.12/@featureInstance.3" destination="//@componentInstance.13/@featureInstance.0">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.8"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mlvcEFo3EeStbr-2I-Mnkg" name="norm_bckp_selection.StatusLoss -> StatusLoss" kind="portConnection" destination="_mlI_Ilo3EeStbr-2I-Mnkg" source="_mlHJ8Vo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mlvcEVo3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mlHJ8Vo3EeStbr-2I-Mnkg" destination="_mlI_Ilo3EeStbr-2I-Mnkg">
+  <connectionInstance name="norm_bckp_selection.StatusLoss -> StatusLoss" kind="portConnection" destination="//@featureInstance.0" source="//@componentInstance.13/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.13/@featureInstance.2" destination="//@featureInstance.0">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.10"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance xmi:id="_mlvcElo3EeStbr-2I-Mnkg" name="norm_bckp_selection.StatusMisleading -> StatusMisleading" kind="portConnection" destination="_mlJmMFo3EeStbr-2I-Mnkg" source="_mlHxAFo3EeStbr-2I-Mnkg">
-    <connectionReference xmi:id="_mlvcE1o3EeStbr-2I-Mnkg" context="_mjdkIFo3EeStbr-2I-Mnkg" source="_mlHxAFo3EeStbr-2I-Mnkg" destination="_mlJmMFo3EeStbr-2I-Mnkg">
+  <connectionInstance name="norm_bckp_selection.StatusMisleading -> StatusMisleading" kind="portConnection" destination="//@featureInstance.1" source="//@componentInstance.13/@featureInstance.3">
+    <connectionReference context="/" source="//@componentInstance.13/@featureInstance.3" destination="//@featureInstance.1">
       <connection xsi:type="aadl2:PortConnection" href="../packages/model_V2.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.9"/>
     </connectionReference>
   </connectionInstance>
-  <systemOperationMode xmi:id="_mlK0UFo3EeStbr-2I-Mnkg" name="No Modes"/>
+  <systemOperationMode name="No Modes"/>
   <componentImplementation xsi:type="aadl2:SystemImplementation" href="../packages/model_V2.aadl#model_V2.model_V2.complete"/>
 </instance:SystemInstance>

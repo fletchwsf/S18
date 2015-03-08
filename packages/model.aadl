@@ -1,6 +1,9 @@
 package model
 public
 
+--This is the system model including individual components
+
+
 with engine;
 with powersupply;
 with computer;

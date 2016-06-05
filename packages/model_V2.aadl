@@ -69,9 +69,10 @@ system implementation model_V2.complete
 new_connection: port engineSubsystem.engine3_generatorDC -> powerSupply4.DC28VoltRawIn;
 	new_connection2: port engineSubsystem.engine1_generatorDC -> powerSupply1.DC28VoltRawIn;
 	new_connection3: port engineSubsystem.engine2_generatorDC_1 -> powerSupply2.DC28VoltRawIn;
-	new_connection4: port engineSubsystem.engine2_generatorDC_1 -> powerSupply3.DC28VoltRawIn;
-	properties
-		Allowed_Processor_Binding => (reference(RT1_1GHz))
+	
+	new_connection4: feature engineSubsystem.engine2_generatorDC_2 -> powerSupply3.DC28VoltRawIn;
+		properties
+			Allowed_Processor_Binding => (reference(RT1_1GHz))
 		applies to voterMain;
 	-- main computers 1, 2, and 3 share a common processing resource
 	Allowed_Processor_Binding => (reference(RT2_1GHz))

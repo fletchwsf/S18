@@ -15,7 +15,7 @@ public
 
 with dataDictionary;
 
-with EMV2, ARP4761;
+--with EMV2, ARP4761;
 
 system powerSupply
 	features

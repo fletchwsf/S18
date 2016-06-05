@@ -1,0 +1,52 @@
+--Package: PCS Power and Control Subsystem Functional Error Library
+package PCSFunctionalErrorLib
+
+
+public
+
+annex EMV2{**
+	error types
+		AnyFunctionalError : type;
+	--	AliasAnyFunctionalError renames type FCSImplementationErrorlib::AnyImplementationError;
+		
+		PowerLoss : type;
+		
+		NoService : type extends AnyFunctionalError;
+		NoPower   : type extends NoService;
+		NoData	  : type extends NoService;
+		ErroneousData : type extends NoService; 
+			
+		PCSTotalDataLoss : type extends AnyFunctionalError;
+		PCSPartialDataLoss : type extends AnyFunctionalError;
+		PCSAllErroneousData : type extends AnyFunctionalError;
+		PCSPartialErroneousData : type extends AnyFunctionalError;
+		
+		PCSLossSet : type set { NoPower, NoData, PCSTotalDataLoss, PCSPartialDataLoss};
+		
+		PCSErronousSet : type set { PCSAllErroneousData, 
+			PCSPartialErroneousData};
+		
+	end types;
+	
+	error behavior twoState
+		use types PCSFunctionalErrorLib;
+		states
+			Operative : initial state;
+			Failed : state {PCSLossSet};
+	end behavior;
+	
+	error behavior twoStateErroneous
+		use types PCSFunctionalErrorLib;
+		events
+			fault: error event {PCSErronousSet};
+		states
+			operative : initial state;
+			erroneous : state {PCSErronousSet};
+	--	transitions
+		--	selfFail: operative -[fault{err_data}]-> erroneous;
+			--selfFault: operative -[fault{no_data} or fault{noPower} or fault{stop}]-> failed;
+	end behavior;
+	
+**};
+
+end PCSFunctionalErrorLib;

@@ -26,46 +26,62 @@ system implementation powerplants.impl
 		
 	annex EMV2 {**
 		use types S18_ErrorLibrary;
-		use behavior S18_ErrorLibrary::twoState;
+		use behavior S18_ErrorLibrary::failureWithImpact;
 		composite error behavior
 			states
-				[ engine1.failed and engine2.failed and engine3.failed]->failed;	
+				-- All engines failed
+				[ engine1.failed and engine2.failed and engine3.failed]->HazardousFailure;	
 				
-				-- How do we account for this state in the FHA?
-				--[(engine1.failed and engine2.failed) or
-				-- (engine1.failed and engine3.failed) or 
-				-- (engine2.failed and engine3.failed)] -> hazardous failure
+				-- Two engines failed
+				[(engine1.failed and engine2.failed) or
+				 	(engine1.failed and engine3.failed) or 
+					(engine2.failed and engine3.failed)]-> MajorFailure;
 			
+				-- One engine failed
+				[engine1.failed or engine2.failed or engine3.failed]->MinorFailure;
 		end composite;
 		
 		properties
 			-- The all engine out condition description will be pickup in
 			--     the FTA report, and as the next higher system failed
 			--     in the FHA report 
-			EMV2::severity => ARP4761::Catastrophic applies to failed;
+			EMV2::severity => ARP4761::Hazardous applies to HazardousFailure;
 			ARP4761::hazards => 
 			([
 				description => "All engine out condition";
 				environment => "All";
 				failure => "All engine out with loss of services";
-				failureEffect => "Loss thrust";
+				failureEffect => "Loss of thrust";
 				phases => ("Takeoff, In-flight, Landing");
 				comment => "All engine inoperative with possible progression to forced landing";
 			])
-			applies to failed;
+			applies to HazardousFailure;
 		
-		--  How can the two engine out state be listed so it is pickup in the FHA?
---			EMV2::severity => ARP4761::Hazardous applies to hazardous failure
---			ARP4761::hazards => 
---			([
---				description => "Two enigne out condition";
---				environment => "All";
---				failure => "Two engines out only partial services available";
---				failureEffect => "Loss thrust";
---				phases => ("Takeoff, In-flight, Landing");
---				comment => "Two engine inoperative with failure to maintain altitude";
---			])
---			applies to failed;
+			EMV2::severity => ARP4761::Major applies to MajorFailure;
+			ARP4761::hazards => 
+			([
+				description => "Two enigne out condition";
+				environment => "All";
+				failure => "Two engines out only partial services available";
+				failureEffect => "Loss of thrust";
+				phases => ("Takeoff, In-flight, Landing");
+				comment => "Two engine inoperative with failure to maintain altitude";
+			])
+			applies to MajorFailure;
+			
+			EMV2::severity => ARP4761::Minor applies to MinorFailure;
+			ARP4761::hazards => 					
+			([
+				description => "One enigne out condition";
+				environment => "All";
+				failure => "One engines out";
+				failureEffect => "Loss of thrust";
+				phases => ("Takeoff, In-flight, Landing");
+				comment => "One engine inoperative";
+			])
+			applies to MinorFailure;
+			
+			
 	**};
 end powerplants.impl;
 

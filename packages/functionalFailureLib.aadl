@@ -1,0 +1,46 @@
+package FunctionalFailureLib
+public
+	
+annex EMV2{**
+	
+	error types
+	
+		anyFunctionalFailure : type;
+
+		minor: type;
+		major: type;
+		hazardous : type;
+		catastrophic : type;
+		
+		functionalFailureSet : type set {minor, anyFunctionalFailure};
+		
+	end types;
+	
+	error behavior twoState
+		use types PCSFunctionalErrorLib;
+		states
+			Operative : initial state;
+			Failed : state {anyFunctionalFailure};
+	end behavior;
+	
+	error behavior functionalClassification
+		use types functionalFailureLib;
+		events
+			failure: error event {functionalFailureSet};
+		states
+			operative : initial state;
+			minorFailure : state {functionalFailureSet};
+			majorFailure : state {functionalFailureSet};
+			hazardousFailure : state {functionalFailureSet};
+			castastrophic : state {functionalFailureSet};
+--		transitions 
+--			fault : operative - failure.minor-> minorFailure;
+--			fault : operative - failure{minor}-> minorFailure;
+--			fault : operative - minor -> minorFailure;
+--			fault : operative - [failure{minor}] ->  minorFailure;
+
+	end behavior;
+	
+**};
+	
+end FunctionalFailureLib;

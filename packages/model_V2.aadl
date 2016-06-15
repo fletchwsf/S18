@@ -82,13 +82,13 @@ new_connection: port engineSubsystem.engine3_generatorDC -> powerSupply4.DC28Vol
 			
 	annex EMV2 {**
 		use types S18_ErrorLibrary;
-		use behavior S18_ErrorLibrary::threeState;
+		use behavior S18_ErrorLibrary::failureWithImpact;
 		composite error behavior
 			states
 				[	(voterMain.failed and norm_bckp_selection.failed) or
 					(voterMain.erroneous and norm_bckp_selection.failed) or
-					enginesubsystem.failed
-				]->failed;
+					enginesubsystem.hazardousFailure
+				]->hazardousFailure;
 					
 		end composite;
 		

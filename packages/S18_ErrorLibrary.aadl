@@ -36,6 +36,19 @@ annex EMV2{**
 			selfFail: operative -[fault{err_data}]-> erroneous;
 			selfFault: operative -[fault{no_data} or fault{noPower} or fault{stop}]-> failed;
 	end behavior;
+	
+	error behavior failureWithImpact
+		use types S18_ErrorLibrary;
+		events 
+			fault : error event {S18_ErrorSet};
+		states
+			Operative : initial state;
+			MinorFailure : state {S18_ErrorSet};
+			MajorFailure : state {S18_ErrorSet};
+			HazardousFailure :  state {S18_ErrorSet};
+			CatastrophicFailure : state {S18_ErrorSet};
+	end behavior;
+	
 **};
 
 end S18_ErrorLibrary;

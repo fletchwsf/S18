@@ -42,10 +42,8 @@ annex EMV2{**
 		states
 			operative : initial state;
 			erroneous : state {PCSErronousSet};
-	--	transitions
-		--	selfFail: operative -[fault{err_data}]-> erroneous;
-			--selfFault: operative -[fault{no_data} or fault{noPower} or fault{stop}]-> failed;
-	end behavior;
+		end behavior;
+
 	
 **};
 

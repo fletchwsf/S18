@@ -5,6 +5,12 @@
 .fta
 .ped
 .xml
+*aadlbin*
+*aadl_diagr*
+*aaxl2*
+
+
+*.gitignore
 
 # Windows image file caches
 Thumbs.db

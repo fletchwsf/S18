@@ -88,12 +88,13 @@ new_connection: port engineSubsystem.engine3_generatorDC -> powerSupply4.DC28Vol
 				[	(voterMain.failed and norm_bckp_selection.failed) or
 					(voterMain.erroneous and norm_bckp_selection.failed) or
 					enginesubsystem.hazardousFailure
-				]->hazardousFailure;
-					
+				]->catastrophicFailure;
+				
+				[enginesubsystem.hazardousFailure]->hazardousFailure;
 		end composite;
 		
 		properties
-			EMV2::severity => ARP4761::Catastrophic applies to hazardousFailure;
+			EMV2::severity => ARP4761::Catastrophic applies to catastrophicFailure;
 			ARP4761::hazards => 
 			([
 				description => "All flight controller computers fail";
@@ -102,6 +103,18 @@ new_connection: port engineSubsystem.engine3_generatorDC -> powerSupply4.DC28Vol
 				failureEffect => "Loss of flight control";
 				phases => ("All");
 				comment => "Primary flight control computers are failed and backup selection switch failure prevents selection of backup system";
+			])
+			applies to catastrophicFailure;
+			
+			EMV2::severity => ARP4761::Catastrophic applies to hazardousFailure;
+			ARP4761::hazards => 
+			([
+				description => "All engines fail";
+				environment => "All";
+				failure => "Loss of thrust";
+				failureEffect => "Failure to maintain flightpath";
+				phases => ("All");
+				comment => "Failure to maintain flightpath with forced landing";
 			])
 			applies to hazardousFailure;
 	**};

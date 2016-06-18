@@ -7,7 +7,7 @@
 .xml
 *aadlbin*
 *aadl_diagr*
-*aaxl2*
+*.aaxl2
 
 
 *.gitignore

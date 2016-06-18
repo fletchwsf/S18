@@ -15,6 +15,8 @@ annex EMV2{**
 	
 		S18_ErrorSet : type set {err_data, no_data, noPower, stop};
 		
+		functionalErrorSet : type set {anyfunctionalError};
+		
 	end types;
 	
 	error behavior twoState
@@ -36,17 +38,18 @@ annex EMV2{**
 			selfFail: operative -[fault{err_data}]-> erroneous;
 			selfFault: operative -[fault{no_data} or fault{noPower} or fault{stop}]-> failed;
 	end behavior;
+
 	
-	error behavior failureWithImpact
+	error behavior failureWithSeverityClassification
 		use types S18_ErrorLibrary;
 		events 
-			fault : error event {S18_ErrorSet};
+			functionalFailure : error event {functionalErrorSet};
 		states
 			Operative : initial state;
-			MinorFailure : state {S18_ErrorSet};
-			MajorFailure : state {S18_ErrorSet};
-			HazardousFailure :  state {S18_ErrorSet};
-			CatastrophicFailure : state {S18_ErrorSet};
+			MinorFailure : state {functionalErrorSet};
+			MajorFailure : state {functionalErrorSet};
+			HazardousFailure :  state {functionalErrorSet};
+			CatastrophicFailure : state {functionalErrorSet};
 	end behavior;
 	
 **};

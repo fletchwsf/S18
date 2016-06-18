@@ -26,7 +26,7 @@ system implementation powerplants.impl
 		
 	annex EMV2 {**
 		use types S18_ErrorLibrary;
-		use behavior S18_ErrorLibrary::failureWithImpact;
+		use behavior S18_ErrorLibrary::failureWithSeverityClassification;
 		composite error behavior
 			states
 				-- All engines failed

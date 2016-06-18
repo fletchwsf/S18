@@ -82,7 +82,7 @@ new_connection: port engineSubsystem.engine3_generatorDC -> powerSupply4.DC28Vol
 			
 	annex EMV2 {**
 		use types S18_ErrorLibrary;
-		use behavior S18_ErrorLibrary::failureWithImpact;
+		use behavior S18_ErrorLibrary::failureWithSeverityClassification;
 		composite error behavior
 			states
 				[	(voterMain.failed and norm_bckp_selection.failed) or
@@ -93,7 +93,7 @@ new_connection: port engineSubsystem.engine3_generatorDC -> powerSupply4.DC28Vol
 		end composite;
 		
 		properties
-			EMV2::severity => ARP4761::Catastrophic applies to failed;
+			EMV2::severity => ARP4761::Catastrophic applies to hazardousFailure;
 			ARP4761::hazards => 
 			([
 				description => "All flight controller computers fail";
@@ -103,7 +103,7 @@ new_connection: port engineSubsystem.engine3_generatorDC -> powerSupply4.DC28Vol
 				phases => ("All");
 				comment => "Primary flight control computers are failed and backup selection switch failure prevents selection of backup system";
 			])
-			applies to failed;
+			applies to hazardousFailure;
 	**};
 end model_V2.complete;
 end model_V2;

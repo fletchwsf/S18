@@ -1,0 +1,56 @@
+package generator
+public
+
+with ARP4761;
+with dataDictionary;
+with PCSFunctionalErrorLib;
+with EMV2;
+
+
+system generator
+	features
+		DCOut : out data port dataDictionary::DC28VoltRaw;
+		EngineStatusIn : in data port dataDictionary::engineStatus;
+	flows
+		f1: flow source DCOut;
+		f2: flow sink engineStatusIn;		
+ 	annex EMV2 {**
+ 		use types PCSFunctionalErrorLib;
+ 		use behavior PCSFunctionalErrorLib::twoState;
+ 		error propagations
+ 			EngineStatusIn : in propagation {noService};
+ 			DCOut : out propagation {noPower};
+ 		end propagations;
+ 		component error behavior
+ 			events
+ 				selfFail : error event;
+ 			transitions
+ 				t1: operative -[engineStatusIn.failed or selfFail ]-> failed;
+ 		end component;
+ 		properties
+			EMV2::occurrencedistribution => [ probabilityvalue => 0.000512345 ; Distribution => Fixed;] applies to selfFail;	
+			EMV2::severity => ARP4761::Minor applies to selfFail;
+					EMV2::severity => ARP4761::Minor applies to failed;
+		ARP4761::hazards => 
+			([
+				description => "Loss of generator power";
+				environment => "All";
+				failure => "Loss of power";
+				failureEffect => "Loss of electrical power";
+				phases => ("All");
+				comment => "Loss of DC generator";
+			])
+			applies to selfFail;
+ 		
+ 	**};
+ 
+ 
+ 
+ end generator;
+ 
+ 
+system implementation generator.impl
+	
+end generator.impl;
+
+end generator;
